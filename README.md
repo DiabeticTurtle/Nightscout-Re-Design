@@ -1,8 +1,15 @@
-Nightscout Web Monitor (a.k.a. cgm-remote-monitor)
+Nightscout ReDesign
 ======================================
 
 ![nightscout horizontal](https://cloud.githubusercontent.com/assets/751143/8425633/93c94dc0-1ebc-11e5-99e7-71a8f464caac.png)
-
+![re-design pics](https://pro2-bar-s3-cdn-cf1.myportfolio.com/46f9f9a1ed2ae77aaeaf6c9f90aea75a/2073b245-c1cf-4754-b827-e5cf55ac358a_rw_1920.png?h=90a543c684ddc14364f97c9efc2b685f)
+![login](https://pro2-bar-s3-cdn-cf1.myportfolio.com/46f9f9a1ed2ae77aaeaf6c9f90aea75a/9c173330-9b40-4d9b-b9c6-59547bb9a575_rw_1920.png?h=c59b7f5a986a9898a8e4834b519a0588)
+[![prototype](http://img.youtube.com/vi/ognstp-5kDI/0.jpg)](http://www.youtube.com/watch?v=ognstp-5kDI "prototype")
+![Graph colors](https://pro2-bar-s3-cdn-cf1.myportfolio.com/46f9f9a1ed2ae77aaeaf6c9f90aea75a/c645072c-3f73-4a3b-8b2f-2a89d0b13fc3_rw_1920.png?h=3728284d694c7bb7ea0fe9dbeb88effb)
+![Graph defult](https://pro2-bar-s3-cdn-cf3.myportfolio.com/46f9f9a1ed2ae77aaeaf6c9f90aea75a/e2a6da02-27f1-45f1-8949-e05da5321c53_rw_1920.png?h=78b0b588851825da9731e8a39e602cc3&url=aHR0cHM6Ly9taXItczMtY2RuLWNmLmJlaGFuY2UubmV0L3Byb2plY3RfbW9kdWxlcy9zb3VyY2UvZjhiNGQ3NjM4OTc2MDcuNWQzOGFjOGEzMmFjYi5wbmc=)
+![Graph Contrast](https://pro2-bar-s3-cdn-cf4.myportfolio.com/46f9f9a1ed2ae77aaeaf6c9f90aea75a/f91795ba-b391-44d1-978d-80ea4d0496ea_rw_1920.png?h=f84134853b19258df741b1551b37adab&url=aHR0cHM6Ly9taXItczMtY2RuLWNmLmJlaGFuY2UubmV0L3Byb2plY3RfbW9kdWxlcy9zb3VyY2UvMGU5Y2Q0NjM4OTc2MDcuNWQzOGFjOGEzMmY0OS5wbmc=)
+![404 page](https://pro2-bar-s3-cdn-cf3.myportfolio.com/46f9f9a1ed2ae77aaeaf6c9f90aea75a/488a585d-1637-4beb-96e6-5c58f3d1ac9b_rw_1920.png?h=c953d41af04dd840ada118cf07f29a33&url=aHR0cHM6Ly9taXItczMtY2RuLWNmLmJlaGFuY2UubmV0L3Byb2plY3RfbW9kdWxlcy9zb3VyY2UvMDIzNGVjNjM4OTc2MDcuNWQzOGFjOGEzMzM1MC5wbmc=)
+![profile editor](https://pro2-bar-s3-cdn-cf1.myportfolio.com/46f9f9a1ed2ae77aaeaf6c9f90aea75a/cc4a9583-30b5-405f-bc22-91db5abaceae_rw_1920.png?h=ed2cf3bc0892144add7d4a7a778865c5)
 [![Build Status][build-img]][build-url]
 [![Dependency Status][dependency-img]][dependency-url]
 [![Coverage Status][coverage-img]][coverage-url]
