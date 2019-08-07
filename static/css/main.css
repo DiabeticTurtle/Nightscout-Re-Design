@@ -10,7 +10,7 @@
 }
 
  [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "nsicons";
+  font-family: "Arial Nova";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -71,8 +71,8 @@ html, body {
 }
 
 body {
-  font-family: 'Ubuntu', sans-serif;
-  background: #000;
+  font-family: 'Ubuntu', 'Arial Nova';
+  background: ##2C2F33;
   color: #bdbdbd;
 }
 
@@ -86,18 +86,6 @@ body {
   z-index: 2;
 }
 
-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.ui-button {
-  background-color: grey;
-  border: 1px solid white;
-  padding: 2px;
-}
-
 a, a:visited, a:link {
   color: #2196f3;
   text-decoration: none;
@@ -108,41 +96,36 @@ a, a:visited, a:link {
 }
 
 #container.alarming.urgent .customTitle {
-  color: red;
+  color: #FF5B47;
 }
 
 #container.alarming.warning .customTitle {
-  color: yellow;
+  color: #E5CD53;
 }
 
 .primary {
-  font-family: 'Ubuntu', Verdana, Helvetica, Arial, sans-serif;
+  font-family: 'Ubuntu', Verdana, Helvetica, Arial, 'Arial Nova';
   vertical-align: middle;
   clear: both;
-  white-space: nowrap;
 }
 
 .bgStatus {
   float: right;
   text-align: center;
-  white-space: normal;
+  white-space: nowrap;
   padding-right: 20px;
 }
 
 .urgent .bgButton {
-  color: red;
+  color: #FF5B47;
 }
 
 .warning .bgButton {
-  color: yellow;
+  color: #E5CD53;
 }
 
 .inrange .bgButton {
-  color: #4cff00;
-}
-
-.bgStatus .bgSpan {
-  white-space: nowrap;
+  color: #68FF74;
 }
 
 .bgStatus .currentBG {
@@ -213,25 +196,25 @@ a, a:visited, a:link {
 }
 
 .container .pill.warn em {
-  color: yellow;
+  color: #E5CD53;
 }
 
 .container .pill.urgent em {
-  color: red;
+  color: #FF5B47;
 }
 
 .alarming-timeago .timeago.pill.warn {
-  border-color: yellow;
+  border-color: #E5CD53;
 }
 .alarming-timeago .timeago.pill.warn label {
-  background: yellow;
+  background: #E5CD53;
 }
 
 .alarming-timeago .timeago.pill.urgent {
-  border-color: red;
+  border-color: #FF5B47;
 }
 .alarming-timeago .timeago.pill.urgent label {
-  background: red;
+  background: #FF5B47;
 }
 
 .bgStatus.current .currentBG {
@@ -245,16 +228,14 @@ a, a:visited, a:link {
 .status {
   color: #808080;
   font-size: 100px;
-  white-space: normal;
 }
 .statusBox {
   text-align: center;
-  width: 40%;
+  width: 250px;
 }
 .statusPills {
   font-size: 20px;
   line-height: 23px;
-  margin-left: 5px;
 }
 
 .loading .statusPills {
@@ -353,11 +334,11 @@ a, a:visited, a:link {
 }
 
 .alarming.urgent .bgButton {
-  background-color: red;
+  background-color: #FF5B47;
 }
 
 .alarming.warning .bgButton {
-  background-color: yellow;
+  background-color: #E5CD53;
 }
 
 .alarming .bgButton:active {
@@ -404,7 +385,7 @@ a, a:visited, a:link {
   margin: 4px;
   padding: 0;
   color: #808080;
-  width: 40%;
+  width: 250px;
   text-align: center;
 }
 
@@ -481,7 +462,6 @@ a, a:visited, a:link {
 
   .focus-range {
     margin: 0;
-    width: 50%;
   }
 
   .focus-range li {
@@ -499,7 +479,7 @@ a, a:visited, a:link {
 
 @media (max-width: 750px) {
   .bgStatus {
-    width: 50%;
+    width: 240px;
     padding: 0 0 20px 0;
   }
 
@@ -509,10 +489,6 @@ a, a:visited, a:link {
 
   .pill.rawbg label {
     font-size: 12px;
-  }
-
-  .statusBox {
-    width: auto;
   }
 
   .bgStatus .currentBG {
@@ -751,6 +727,10 @@ a, a:visited, a:link {
 
   .focus-range li {
     display: block;
+  }
+
+  .statusBox {
+    width: 220px;
   }
 
   .statusPills {
