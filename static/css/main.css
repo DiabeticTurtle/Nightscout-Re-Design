@@ -219,6 +219,7 @@ a, a:visited, a:link {
 
 .bgStatus.current .currentBG {
   text-decoration: none;
+  
 }
 
 .alarming-timeago .bgStatus.current .currentBG {
@@ -231,7 +232,7 @@ a, a:visited, a:link {
 }
 .statusBox {
   text-align: center;
-  width: 250px;
+  width: 40%;
 }
 .statusPills {
   font-size: 20px;
@@ -385,7 +386,7 @@ a, a:visited, a:link {
   margin: 4px;
   padding: 0;
   color: #808080;
-  width: 250px;
+  width: 40%;
   text-align: center;
 }
 
@@ -517,7 +518,7 @@ a, a:visited, a:link {
 
   .status {
     font-size: 50px;
-    width: 250px;
+    width: 40%;
   }
 }
 
@@ -531,7 +532,7 @@ a, a:visited, a:link {
     float: none;
     padding: 0;
     text-align: center;
-    width: 250px;
+    width: 40%;
   }
 
 
@@ -684,7 +685,7 @@ a, a:visited, a:link {
 
   .bgStatus {
     text-align: center;
-    width: 220px;
+    width: 50%;
     left: 0;
   }
 
@@ -730,7 +731,7 @@ a, a:visited, a:link {
   }
 
   .statusBox {
-    width: 220px;
+    width: auto;
   }
 
   .statusPills {
