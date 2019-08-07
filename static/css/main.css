@@ -104,7 +104,7 @@ a, a:visited, a:link {
 }
 
 .primary {
-  font-family: 'Ubuntu', Verdana, Helvetica, Arial, 'Arial Nova';
+  font-family: 'Ubuntu', 'Verdana', 'Helvetica', 'Arial', 'Arial Nova';
   vertical-align: middle;
   clear: both;
 }
@@ -143,7 +143,7 @@ a, a:visited, a:link {
   font-weight: normal;
   text-decoration: none;
   font-size: 90px;
-  line-height: 90px;
+  line-height: 200px;
   vertical-align: middle;
   border: none;
   background: none;
@@ -172,8 +172,8 @@ a, a:visited, a:link {
 .pill {
   white-space: nowrap;
   border-radius: 5px;
-  border: 2px solid #808080;
-  background: #808080;
+  border: 2px solid #860d0d;
+  background: #1A1A1A;
   display: inline-block;
   margin-bottom: 4px;
   padding: 2px 0;
@@ -227,7 +227,7 @@ a, a:visited, a:link {
 }
 
 .status {
-  color: #808080;
+  color: #1A1A1A;
   font-size: 100px;
 }
 .statusBox {
@@ -244,13 +244,13 @@ a, a:visited, a:link {
 }
 
 .statusPills .pill {
-  background: #808080;
-  border-color: #808080;
+  background: #1A1A1A;
+  border-color: #1A1A1A;
   margin-right: 5px;
 }
 
 .statusPills .pill em {
-  color: #bdbdbd;
+  color: #707070;
 }
 
 #chartContainer {
@@ -309,7 +309,7 @@ a, a:visited, a:link {
 .pill.rawbg {
   display: inline-block;
   border-radius: 2px;
-  border: 1px solid #808080;
+  border: 1px solid #1A1A1A;
   padding: 0;
 }
 
@@ -329,7 +329,7 @@ a, a:visited, a:link {
 }
 
 .alarming .bgButton {
-  border-color: #bdbdbd;
+  border-color: #707070;
   color: #000;
   box-shadow: 2px 2px 0 #ddd;
 }
@@ -352,7 +352,7 @@ a, a:visited, a:link {
 
 .button {
   text-align: center;
-  background: #ababab;
+  background: #4b4b4b;
   margin: 10px auto;
 }
 
@@ -385,7 +385,7 @@ a, a:visited, a:link {
   list-style: none;
   margin: 4px;
   padding: 0;
-  color: #808080;
+  color: #1A1A1A;
   width: 40%;
   text-align: center;
 }
@@ -400,9 +400,9 @@ a, a:visited, a:link {
 }
 
 .focus-range .selected {
-  border-color: #808080;
+  border-color: #1A1A1A;
   color: #000;
-  background: #808080;
+  background: #1A1A1A;
 }
 
 .pill.hidden {
@@ -428,17 +428,17 @@ a, a:visited, a:link {
   }
 
   .bgStatus .currentBG {
-    font-size: 80px;
-    line-height: 80px;
+    font-size: 100px;
+    line-height: 100px;
   }
 
   .bgStatus .currentBG.bg-limit, .bgStatus .currentBG.icon-hourglass {
-    font-size: 70px;
+    font-size: 90px;
   }
 
   .bgStatus .pill.direction {
-    font-size: 70px;
-    line-height: 70px;
+    font-size: 90px;
+    line-height: 90px;
   }
 
   .bgStatus .majorPills {
