@@ -6,6 +6,7 @@ body {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     color: #ffffff;
     background-color: #333333;
+    background-image: url(pattern.png);
 }
 
 main {
