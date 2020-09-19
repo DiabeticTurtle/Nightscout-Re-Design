@@ -47,50 +47,57 @@ if (process.env.NODE_ENV === 'development') {
 */
 
 pluginArray.push(new webpack.ProvidePlugin({
-  $: 'jquery',
-  jQuery: 'jquery',
-  'window.jQuery': 'jquery',
-  'window.$': 'jquery'
+    $: 'jquery',
+    jQuery: 'jquery',
+    'window.jQuery': 'jquery',
+    'window.$': 'jquery'
 }));
 
 // limit Timezone data from Moment
 
 pluginArray.push(new MomentTimezoneDataPlugin({
-  startYear: 2010,
-  endYear: new Date().getFullYear() + 10,
+    startYear: 2010,
+    endYear: new Date().getFullYear() + 10,
 }));
 
 // Strip all locales except the ones defined in lib/language.js
 // (“en” is built into Moment and can’t be removed, 'dk' is not defined in moment)
 pluginArray.push(new MomentLocalesPlugin({
-  localesToKeep: ['bg', 'cs', 'de', 'el', 'es', 'fi', 'fr', 'he', 'hr', 'it', 'ko', 'nb', 'nl', 'pl', 'pt', 'ro', 'ru',
-    'sk', 'sv', 'zh_cn', 'zh_tw'
-  ],
+    localesToKeep: ['bg', 'cs', 'de', 'el', 'es', 'fi', 'fr', 'he', 'hr', 'it', 'ko', 'nb', 'nl', 'pl', 'pt', 'ro', 'ru',
+        'sk', 'sv', 'zh_cn', 'zh_tw'
+    ],
 }));
 
 const rules = [{
-    test: /\.(jpe?g|png|gif)$/i,
-    loader: 'file-loader',
-    query: {
-      name: '[name].[ext]',
-      outputPath: 'images/'
-      //the images will be emmited to public/assets/images/ folder
-      //the images will be put in the DOM <style> tag as eg. background: url(assets/images/image.png);
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: "babel-loader"
+        }
     },
-    exclude: /node_modules/
-  },
-  {
-    test: /\.css$/,
-    loaders: ['style-loader', 'css-loader'],
-    exclude: /node_modules/
-  },
-  {
-    test: require.resolve('jquery'),
-    use: [{
-      loader: 'expose-loader',
-      options: '$'
-    }]
-  }
+    {
+        test: /\.(jpe?g|png|gif)$/i,
+        loader: 'file-loader',
+        query: {
+            name: '[name].[ext]',
+            outputPath: 'images/'
+                //the images will be emmited to public/assets/images/ folder
+                //the images will be put in the DOM <style> tag as eg. background: url(assets/images/image.png);
+        },
+        exclude: /node_modules/
+    },
+    {
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader'],
+        exclude: /node_modules/
+    },
+    {
+        test: require.resolve('jquery'),
+        use: [{
+            loader: 'expose-loader',
+            options: '$'
+        }]
+    }
 ];
 
 const appEntry = ['./bundle/bundle.source.js'];
@@ -101,68 +108,68 @@ let mode = 'production';
 let publicPath = '/bundle/';
 
 if (process.env.NODE_ENV == 'development') {
-  mode = 'development';
-  publicPath = '/devbundle/';
-  pluginArray.push(new webpack.HotModuleReplacementPlugin());
-  pluginArray.push(new webpack.NoEmitOnErrorsPlugin());
+    mode = 'development';
+    publicPath = '/devbundle/';
+    pluginArray.push(new webpack.HotModuleReplacementPlugin());
+    pluginArray.push(new webpack.NoEmitOnErrorsPlugin());
 
-  const hot = 'webpack-hot-middleware/client?port=1337';
+    const hot = 'webpack-hot-middleware/client?port=1337';
 
-  appEntry.unshift(hot);
-  clockEntry.unshift(hot);
-  reportEntry.unshift(hot);
+    appEntry.unshift(hot);
+    clockEntry.unshift(hot);
+    reportEntry.unshift(hot);
 
-  rules.unshift({
-    enforce: "pre",
-    test: /\.js$/,
-    exclude: [/node_modules/, /bundle/],
-    loader: "eslint-loader",
-    options: {
-      emitWarning: true,
-      failOnError: false,
-      failOnWarning: false,
-      formatter: require('eslint/lib/cli-engine/formatters/stylish')
-    }
-  });
+    rules.unshift({
+        enforce: "pre",
+        test: /\.js$/,
+        exclude: [/node_modules/, /bundle/],
+        loader: "eslint-loader",
+        options: {
+            emitWarning: true,
+            failOnError: false,
+            failOnWarning: false,
+            formatter: require('eslint/lib/cli-engine/formatters/stylish')
+        }
+    });
 
 }
 
 const optimization = {};
 
 if (process.env.NODE_ENV !== 'development') {
-  optimization.minimizer = [
-    new TerserPlugin({
-      cache: true,
-      parallel: true,
-      sourceMap: true, // Must be set to true if using source-maps in production
-      terserOptions: {
-        ie8: false,
-        safari10: false
-        // https://github.com/webpack-contrib/terser-webpack-plugin#terseroptions
-      }
-    }),
-  ];
+    optimization.minimizer = [
+        new TerserPlugin({
+            cache: true,
+            parallel: true,
+            sourceMap: true, // Must be set to true if using source-maps in production
+            terserOptions: {
+                ie8: false,
+                safari10: false
+                    // https://github.com/webpack-contrib/terser-webpack-plugin#terseroptions
+            }
+        }),
+    ];
 };
 
 module.exports = {
-  mode,
-  context: __dirname,
-  context: path.resolve(__dirname, '.'),
-  entry: {
-    app: appEntry,
-    clock: clockEntry,
-    report: reportEntry
-  },
-  output: {
-    path: path.resolve(__dirname, './tmp'),
-    publicPath,
-    filename: 'js/bundle.[name].js',
-    sourceMapFilename: 'js/bundle.[name].js.map',
-  },
-  devtool: sourceMapType,
-  optimization,
-  plugins: pluginArray,
-  module: {
-    rules
-  }
+    mode,
+    context: __dirname,
+    context: path.resolve(__dirname, '.'),
+    entry: {
+        app: appEntry,
+        clock: clockEntry,
+        report: reportEntry
+    },
+    output: {
+        path: path.resolve(__dirname, './tmp'),
+        publicPath,
+        filename: 'js/bundle.[name].js',
+        sourceMapFilename: 'js/bundle.[name].js.map',
+    },
+    devtool: sourceMapType,
+    optimization,
+    plugins: pluginArray,
+    module: {
+        rules
+    }
 };

@@ -9,8 +9,22 @@
   font-style: normal;
 }
 
- [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "Arial Nova";
+/* 
+  Icon font for additional plugin icons. 
+  Please read assets/fonts/README.md about update process
+*/
+@font-face {
+  font-family: 'pluginicons';
+  /* Plugin Icons font files content (from WOFF and SVG icon files, base64 encoded) */
+  src: url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAWAAAsAAAAABTQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABCAAAAGAAAABgDxIE8mNtYXAAAAFoAAAAVAAAAFQXVdKJZ2FzcAAAAbwAAAAIAAAACAAAABBnbHlmAAABxAAAAUgAAAFIFA4eR2hlYWQAAAMMAAAANgAAADYXVLrVaGhlYQAAA0QAAAAkAAAAJAdQA8ZobXR4AAADaAAAABQAAAAUCY4AAGxvY2EAAAN8AAAADAAAAAwAKAC4bWF4cAAAA4gAAAAgAAAAIAAJAFxuYW1lAAADqAAAAbYAAAG2DBt7mXBvc3QAAAVgAAAAIAAAACAAAwAAAAMCxwGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA6QEDwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADgAAAAKAAgAAgACAAEAIOkB//3//wAAAAAAIOkB//3//wAB/+MXAwADAAEAAAAAAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAwAA/8ADjgPAABsAOgBZAAABIgcOAQcGFRQXHgEXFjMyNz4BNzY1NCcuAScmARUUFx4BFxYzMjc+ATc2PQEUBw4BBwYjIicuAScmNREVFBceARcWMzI3PgE3Nj0BFAcOAQcGIyInLgEnJjUBx15TU3skJCQke1NTXl5TU3wjJCQjfFNT/dskJHtTU15eU1N8IyQkI3xTU15eU1N7JCQkJHtTU15eU1N8IyQkI3xTU15eU1N7JCQDwBISPikpMC8pKj0SEhISPSopLzApKT4SEv6rqy8qKT4SEhISPikqL6svKik+EhISEj4pKi/+46owKSk+EhISEj4pKTCqLykqPhESEhE+KikvAAAAAAEAAAABAABgRbaTXw889QALBAAAAAAA2lO7LAAAAADaU7ssAAD/wAOOA8AAAAAIAAIAAAAAAAAAAQAAA8D/wAAABAAAAAAAA44AAQAAAAAAAAAAAAAAAAAAAAUEAAAAAAAAAAAAAAACAAAAA44AAAAAAAAACgAUAB4ApAABAAAABQBaAAMAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAADgCuAAEAAAAAAAEACwAAAAEAAAAAAAIABwCEAAEAAAAAAAMACwBCAAEAAAAAAAQACwCZAAEAAAAAAAUACwAhAAEAAAAAAAYACwBjAAEAAAAAAAoAGgC6AAMAAQQJAAEAFgALAAMAAQQJAAIADgCLAAMAAQQJAAMAFgBNAAMAAQQJAAQAFgCkAAMAAQQJAAUAFgAsAAMAAQQJAAYAFgBuAAMAAQQJAAoANADUcGx1Z2luaWNvbnMAcABsAHUAZwBpAG4AaQBjAG8AbgBzVmVyc2lvbiAxLjAAVgBlAHIAcwBpAG8AbgAgADEALgAwcGx1Z2luaWNvbnMAcABsAHUAZwBpAG4AaQBjAG8AbgBzcGx1Z2luaWNvbnMAcABsAHUAZwBpAG4AaQBjAG8AbgBzUmVndWxhcgBSAGUAZwB1AGwAYQBycGx1Z2luaWNvbnMAcABsAHUAZwBpAG4AaQBjAG8AbgBzRm9udCBnZW5lcmF0ZWQgYnkgSWNvTW9vbi4ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==) format('woff'),
+       url(data:application/font-svg;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIiA+DQo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8bWV0YWRhdGE+R2VuZXJhdGVkIGJ5IEljb01vb248L21ldGFkYXRhPg0KPGRlZnM+DQo8Zm9udCBpZD0icGx1Z2luaWNvbnMiIGhvcml6LWFkdi14PSIxMDI0Ij4NCjxmb250LWZhY2UgdW5pdHMtcGVyLWVtPSIxMDI0IiBhc2NlbnQ9Ijk2MCIgZGVzY2VudD0iLTY0IiAvPg0KPG1pc3NpbmctZ2x5cGggaG9yaXotYWR2LXg9IjEwMjQiIC8+DQo8Z2x5cGggdW5pY29kZT0iJiN4MjA7IiBob3Jpei1hZHYteD0iNTEyIiBkPSIiIC8+DQo8Z2x5cGggdW5pY29kZT0iJiN4ZTkwMTsiIGdseXBoLW5hbWU9ImRhdGFiYXNlIiBob3Jpei1hZHYteD0iOTEwIiBkPSJNNDU1LjExMSA5NjBjLTI1MS40NDkgMC00NTUuMTExLTEwMS44MzEtNDU1LjExMS0yMjcuNTU2czIwMy42NjItMjI3LjU1NiA0NTUuMTExLTIyNy41NTYgNDU1LjExMSAxMDEuODMxIDQ1NS4xMTEgMjI3LjU1Ni0yMDMuNjYyIDIyNy41NTYtNDU1LjExMSAyMjcuNTU2ek0wIDYxOC42Njd2LTE3MC42NjdjMC0xMjUuNzI0IDIwMy42NjItMjI3LjU1NiA0NTUuMTExLTIyNy41NTZzNDU1LjExMSAxMDEuODMxIDQ1NS4xMTEgMjI3LjU1NnYxNzAuNjY3YzAtMTI1LjcyNC0yMDMuNjYyLTIyNy41NTYtNDU1LjExMS0yMjcuNTU2cy00NTUuMTExIDEwMS44MzEtNDU1LjExMSAyMjcuNTU2ek0wIDMzNC4yMjJ2LTE3MC42NjdjMC0xMjUuNzI0IDIwMy42NjItMjI3LjU1NiA0NTUuMTExLTIyNy41NTZzNDU1LjExMSAxMDEuODMxIDQ1NS4xMTEgMjI3LjU1NnYxNzAuNjY3YzAtMTI1LjcyNC0yMDMuNjYyLTIyNy41NTYtNDU1LjExMS0yMjcuNTU2cy00NTUuMTExIDEwMS44MzEtNDU1LjExMSAyMjcuNTU2eiIgLz4NCjwvZm9udD48L2RlZnM+PC9zdmc+) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ [class^="icon-"]:before, [class*=" icon-"]:before, 
+ [class^="plugicon-"]:before, [class*=" plugicon-"]:before {
+  font-family: "nsicons";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -43,6 +57,10 @@
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
+
+[class^="plugicon-"]:before, [class*=" plugicon-"]:before {
+  font-family: "pluginicons";
+}
  
 .icon-volume:before { content: '\e800'; }
 .icon-plus:before { content: '\e801'; }
@@ -65,14 +83,17 @@
 .icon-chart-line:before { content: '\f201'; }
 .icon-hourglass:before { content: '\f254'; }
 
+/* Plugin Icons id-s (copy from generated icon style.css) */
+.plugicon-database:before { content: "\e901"; }
+
 html, body {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family:  'Arial Nova';
-  background: #2C2F33;
+  font-family: 'Ubuntu', sans-serif;
+  background: #000;
   color: #bdbdbd;
 }
 
@@ -86,6 +107,18 @@ body {
   z-index: 2;
 }
 
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.ui-button {
+  background-color: grey;
+  border: 1px solid white;
+  padding: 2px;
+}
+
 a, a:visited, a:link {
   color: #2196f3;
   text-decoration: none;
@@ -96,36 +129,41 @@ a, a:visited, a:link {
 }
 
 #container.alarming.urgent .customTitle {
-  color: #FF5B47;
+  color: red;
 }
 
 #container.alarming.warning .customTitle {
-  color: #E5CD53;
+  color: yellow;
 }
 
 .primary {
-  font-family: 'Ubuntu', 'Verdana', 'Helvetica', 'Arial', 'Arial Nova';
+  font-family: 'Ubuntu', Verdana, Helvetica, Arial, sans-serif;
   vertical-align: middle;
   clear: both;
+  white-space: nowrap;
 }
 
 .bgStatus {
   float: right;
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
   padding-right: 20px;
 }
 
 .urgent .bgButton {
-  color: #FF5B47;
+  color: red;
 }
 
 .warning .bgButton {
-  color: #E5CD53;
+  color: yellow;
 }
 
 .inrange .bgButton {
-  color: #68FF74;
+  color: #4cff00;
+}
+
+.bgStatus .bgSpan {
+  white-space: nowrap;
 }
 
 .bgStatus .currentBG {
@@ -143,7 +181,7 @@ a, a:visited, a:link {
   font-weight: normal;
   text-decoration: none;
   font-size: 90px;
-  line-height: 200px;
+  line-height: 90px;
   vertical-align: middle;
   border: none;
   background: none;
@@ -172,8 +210,8 @@ a, a:visited, a:link {
 .pill {
   white-space: nowrap;
   border-radius: 5px;
-  border: 2px solid #860d0d;
-  background: #1A1A1A;
+  border: 2px solid #808080;
+  background: #808080;
   display: inline-block;
   margin-bottom: 4px;
   padding: 2px 0;
@@ -196,30 +234,29 @@ a, a:visited, a:link {
 }
 
 .container .pill.warn em {
-  color: #E5CD53;
+  color: yellow;
 }
 
 .container .pill.urgent em {
-  color: #FF5B47;
+  color: red;
 }
 
 .alarming-timeago .timeago.pill.warn {
-  border-color: #E5CD53;
+  border-color: yellow;
 }
 .alarming-timeago .timeago.pill.warn label {
-  background: #E5CD53;
+  background: yellow;
 }
 
 .alarming-timeago .timeago.pill.urgent {
-  border-color: #FF5B47;
+  border-color: red;
 }
 .alarming-timeago .timeago.pill.urgent label {
-  background: #FF5B47;
+  background: red;
 }
 
 .bgStatus.current .currentBG {
   text-decoration: none;
-  
 }
 
 .alarming-timeago .bgStatus.current .currentBG {
@@ -227,8 +264,9 @@ a, a:visited, a:link {
 }
 
 .status {
-  color: #1A1A1A;
+  color: #808080;
   font-size: 100px;
+  white-space: normal;
 }
 .statusBox {
   text-align: center;
@@ -237,6 +275,7 @@ a, a:visited, a:link {
 .statusPills {
   font-size: 20px;
   line-height: 23px;
+  margin-left: 5px;
 }
 
 .loading .statusPills {
@@ -244,13 +283,13 @@ a, a:visited, a:link {
 }
 
 .statusPills .pill {
-  background: #1A1A1A;
-  border-color: #1A1A1A;
+  background: #808080;
+  border-color: #808080;
   margin-right: 5px;
 }
 
 .statusPills .pill em {
-  color: #707070;
+  color: #bdbdbd;
 }
 
 #chartContainer {
@@ -309,7 +348,7 @@ a, a:visited, a:link {
 .pill.rawbg {
   display: inline-block;
   border-radius: 2px;
-  border: 1px solid #1A1A1A;
+  border: 1px solid #808080;
   padding: 0;
 }
 
@@ -329,17 +368,17 @@ a, a:visited, a:link {
 }
 
 .alarming .bgButton {
-  border-color: #707070;
+  border-color: #bdbdbd;
   color: #000;
   box-shadow: 2px 2px 0 #ddd;
 }
 
 .alarming.urgent .bgButton {
-  background-color: #FF5B47;
+  background-color: red;
 }
 
 .alarming.warning .bgButton {
-  background-color: #E5CD53;
+  background-color: yellow;
 }
 
 .alarming .bgButton:active {
@@ -352,7 +391,7 @@ a, a:visited, a:link {
 
 .button {
   text-align: center;
-  background: #4b4b4b;
+  background: #ababab;
   margin: 10px auto;
 }
 
@@ -385,7 +424,7 @@ a, a:visited, a:link {
   list-style: none;
   margin: 4px;
   padding: 0;
-  color: #1A1A1A;
+  color: #808080;
   width: 40%;
   text-align: center;
 }
@@ -400,27 +439,45 @@ a, a:visited, a:link {
 }
 
 .focus-range .selected {
-  border-color: #1A1A1A;
+  border-color: #808080;
   color: #000;
-  background: #1A1A1A;
+  background: #808080;
 }
 
 .pill.hidden {
   display: none;
 }
 
-#authorizationstatus a {
+.toolbar-title {
+  text-align: left;
+  padding: 0 10px;
+}
+
+.toolbar-title h2 {
+  margin: 0;
+}
+
+.page-content {
+  padding: 10px;
+}
+
+.authentication-status {
+  padding: 10px;
+  border-top: 1px solid #bdbdbd;
+}
+
+.authentication-status a {
   color: #2196f3;
   text-decoration: underline;
 }
 
-#authorizationstatus .small {
+.authentication-status .small {
   font-size: 12px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .bgStatus {
-    width: 300px;
+    width: 450px;
   }
 
   .bgButton {
@@ -428,17 +485,17 @@ a, a:visited, a:link {
   }
 
   .bgStatus .currentBG {
-    font-size: 100px;
-    line-height: 100px;
+    font-size: 80px;
+    line-height: 80px;
   }
 
   .bgStatus .currentBG.bg-limit, .bgStatus .currentBG.icon-hourglass {
-    font-size: 90px;
+    font-size: 70px;
   }
 
   .bgStatus .pill.direction {
-    font-size: 90px;
-    line-height: 90px;
+    font-size: 70px;
+    line-height: 70px;
   }
 
   .bgStatus .majorPills {
@@ -463,6 +520,7 @@ a, a:visited, a:link {
 
   .focus-range {
     margin: 0;
+    width: 50%;
   }
 
   .focus-range li {
@@ -479,8 +537,13 @@ a, a:visited, a:link {
 }
 
 @media (max-width: 750px) {
+  .x.axis {
+    font-size: 2.5vmin !important;
+  }
+
+
   .bgStatus {
-    width: 240px;
+    width: 50%;
     padding: 0 0 20px 0;
   }
 
@@ -490,6 +553,10 @@ a, a:visited, a:link {
 
   .pill.rawbg label {
     font-size: 12px;
+  }
+
+  .statusBox {
+    width: auto;
   }
 
   .bgStatus .currentBG {
@@ -518,7 +585,7 @@ a, a:visited, a:link {
 
   .status {
     font-size: 50px;
-    width: 40%;
+    width: 250px;
   }
 }
 
@@ -532,7 +599,7 @@ a, a:visited, a:link {
     float: none;
     padding: 0;
     text-align: center;
-    width: 40%;
+    width: 250px;
   }
 
 
@@ -616,6 +683,10 @@ a, a:visited, a:link {
   #chartContainer {
     font-size: 14px;
   }
+  .y.axis {
+    font-size: 2.5vmin !important;
+  }
+
 }
 
 @media (max-height: 600px) {
@@ -628,6 +699,22 @@ a, a:visited, a:link {
   #container #toolbar {
     float: right;
     height: auto;
+    background: none;
+    border-bottom: none;
+    margin: 0px;
+  }
+
+  #buttonbar {
+    margin-right: 0px;
+    padding-right: 15px;
+    margin-top: 15px;
+    height: 44px;
+    opacity: 0.75;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+    z-index: 500;
+    width: 400px;
   }
 
   #toolbar .customTitle {
@@ -685,7 +772,7 @@ a, a:visited, a:link {
 
   .bgStatus {
     text-align: center;
-    width: 50%;
+    width: 220px;
     left: 0;
   }
 
@@ -728,10 +815,6 @@ a, a:visited, a:link {
 
   .focus-range li {
     display: block;
-  }
-
-  .statusBox {
-    width: auto;
   }
 
   .statusPills {
