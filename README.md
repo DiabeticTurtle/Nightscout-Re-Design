@@ -4,7 +4,7 @@ Nightscout ReDesign (forked from [cgm-remote-monitor](https://github.com/nightsc
 ![nightscout horizontal](https://cloud.githubusercontent.com/assets/751143/8425633/93c94dc0-1ebc-11e5-99e7-71a8f464caac.png)
 ![re-design pics](https://pro2-bar-s3-cdn-cf.myportfolio.com/46f9f9a1ed2ae77aaeaf6c9f90aea75a/be4ad96f-2f4f-462f-912c-590ace452418_rw_1920.png?h=0d2c6fce98249ace21af146668b53d90)
 ![login](https://pro2-bar-s3-cdn-cf6.myportfolio.com/46f9f9a1ed2ae77aaeaf6c9f90aea75a/72d218da-2394-4ff1-929d-685b0e133001_rw_1920.png?h=65de1f962c2405670e912ef8c735f7eb)
-[![prototype](http://img.youtube.com/vi/ognstp-5kDI/0.jpg)](http://www.youtube.com/watch?v=ognstp-5kDI "prototype")
+[![prototype](https://youtu.be/yvxjhZqqeBQ "prototype")
 ![Graph colors](https://pro2-bar-s3-cdn-cf1.myportfolio.com/46f9f9a1ed2ae77aaeaf6c9f90aea75a/c645072c-3f73-4a3b-8b2f-2a89d0b13fc3_rw_1920.png?h=3728284d694c7bb7ea0fe9dbeb88effb)
 ![Graph defult](https://pro2-bar-s3-cdn-cf3.myportfolio.com/46f9f9a1ed2ae77aaeaf6c9f90aea75a/e2a6da02-27f1-45f1-8949-e05da5321c53_rw_1920.png?h=78b0b588851825da9731e8a39e602cc3&url=aHR0cHM6Ly9taXItczMtY2RuLWNmLmJlaGFuY2UubmV0L3Byb2plY3RfbW9kdWxlcy9zb3VyY2UvZjhiNGQ3NjM4OTc2MDcuNWQzOGFjOGEzMmFjYi5wbmc=)
 ![Graph Contrast](https://pro2-bar-s3-cdn-cf4.myportfolio.com/46f9f9a1ed2ae77aaeaf6c9f90aea75a/f91795ba-b391-44d1-978d-80ea4d0496ea_rw_1920.png?h=f84134853b19258df741b1551b37adab&url=aHR0cHM6Ly9taXItczMtY2RuLWNmLmJlaGFuY2UubmV0L3Byb2plY3RfbW9kdWxlcy9zb3VyY2UvMGU5Y2Q0NjM4OTc2MDcuNWQzOGFjOGEzMmY0OS5wbmc=)
