@@ -10,6 +10,7 @@ Nightscout ReDesign (forked from [cgm-remote-monitor](https://github.com/nightsc
 ![Graph Contrast](https://pro2-bar-s3-cdn-cf4.myportfolio.com/46f9f9a1ed2ae77aaeaf6c9f90aea75a/f91795ba-b391-44d1-978d-80ea4d0496ea_rw_1920.png?h=f84134853b19258df741b1551b37adab&url=aHR0cHM6Ly9taXItczMtY2RuLWNmLmJlaGFuY2UubmV0L3Byb2plY3RfbW9kdWxlcy9zb3VyY2UvMGU5Y2Q0NjM4OTc2MDcuNWQzOGFjOGEzMmY0OS5wbmc=)
 ![404 page](https://pro2-bar-s3-cdn-cf6.myportfolio.com/46f9f9a1ed2ae77aaeaf6c9f90aea75a/aab5224b-24cd-4129-b450-c02e42215d62_rw_1920.png?h=a887bcabfa925d9ee1b261de36dbe903)
 ![profile editor](https://pro2-bar-s3-cdn-cf.myportfolio.com/46f9f9a1ed2ae77aaeaf6c9f90aea75a/bf17175e-7e0f-484a-bdcb-acd21d31bdc2_rw_1920.png?h=97293be4b3a071123787dadd082d3889)
+![hamburger menu](https://pro2-bar-s3-cdn-cf1.myportfolio.com/46f9f9a1ed2ae77aaeaf6c9f90aea75a/9f32b48e-1489-4ab3-9419-fec7d1601cc9_rw_600.png?h=370ad27ed79d12ad57edf89d0299afd8)
 
 ![nightscout horizontal](https://cloud.githubusercontent.com/assets/751143/8425633/93c94dc0-1ebc-11e5-99e7-71a8f464caac.png)
 
